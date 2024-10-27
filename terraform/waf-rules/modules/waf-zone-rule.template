@@ -10,56 +10,5 @@ resource "cloudflare_ruleset" "zone_level_custom_waf_ruleset" {
   kind        = "zone"
   phase       = "http_request_firewall_custom"
 
-  rules = [{
-    #### CHALLENGE JS RULE
-    description = "WAF RULE N°1"
-    action      = "js_challenge"
-    expression  = "( EXPRESSION DE LA REGLE )"
-    enabled     = true
-  },
-  {
-    #### MANAGED CHALLENGE RULE
-    description = "WAF RULE N°2"
-    action      = "managed_challenge"
-    expression  = "( EXPRESSION DE LA REGLE )"
-    enabled     = true
-  },
-  {
-    #### INTERACTIVE CHALLENGE RULE
-    description = "WAF RULE N°3"
-    action      = "challenge"
-    expression  = "( EXPRESSION DE LA REGLE )"
-    enabled     = true
-  },
-  {
-    #### BLOCK CHALLENGE RULE
-    description = "WAF RULE N°4"
-    action      = "block"
-    expression  = "( EXPRESSION DE LA REGLE )"
-    enabled     = true
-  },
-  {
-    #### SKIP RULE
-    description = "WAF RULE N°5"
-    action      = "skip"
-    expression  = "( EXPRESSION DE LA REGLE )"
-    action_parameters = {
-      ruleset     = "current" ### All remaining custom rules
-      phases      = [
-            "http_ratelimit", ### All rate limiting rules
-            "http_request_firewall_managed", ### All remaining managed rules
-            "http_request_sbfm", ### All Super BOT Fight Mode Rules
-          ]
-      products    = [
-        "zoneLockdown", ### Zone Lockdown
-        "uaBlock", ### User Agent Blocking
-        "bic", ### Browser Integrity Check
-        "hot", ### Hotlink Protection
-        "securityLevel", ### Security Level
-        "rateLimit", ### Rate Limiting (previous version)
-        "waf" ### WAF managed rules (previous version)	
-      ]
-    }
-    enabled     = true
-  }]
+  rules = var.zone-fqdn_rules
 }

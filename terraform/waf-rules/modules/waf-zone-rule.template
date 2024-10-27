@@ -1,17 +1,26 @@
 ################################################################################################
 #
-# Template for WAF custom rule with Managed Challenge
+# Template for WAF custome ruleset
 #
 ################################################################################################
-resource "cloudflare_ruleset" "zone_level_custom_waf_managed_challenge" {
+resource "cloudflare_ruleset" "zone_level_custom_waf_ruleset" {
   zone_id     = var.cloudflare_zone_id
-  name        = "WAF RULE NAME"
-  description = "WAF RULE DESCRIPTION"
+  name        = "WAF RULESET NAME"
+  description = "WAF RULESET DESCRIPTION"
   kind        = "zone"
   phase       = "http_request_firewall_custom"
 
   rules = [{
-    action = "managed_challenge"
+    #### CHALLENGE JS RULE
+    description = "WAF RULE N°2"
+    action      = "js_challenge"
+    expression  = "( EXPRESSION DE LA REGLE )"
+    enabled     = true
+  },
+  {
+    #### MANAGED CHALLENGE RULE
+    description = "WAF RULE N°1"
+    action      = "managed_challenge"
     expression  = "( EXPRESSION DE LA REGLE )"
     enabled     = true
   }]

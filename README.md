@@ -8,5 +8,5 @@ Doc sur la création d'un token d'API avec les bons droits.
 
 ## Fonctionnalités
 ### WAF Rules
-Pour connaître la liste des actions disponibles: https://developers.cloudflare.com/ruleset-engine/rules-language/actions/
-Pour connaitre la liste des phases disponibles: https://developers.cloudflare.com/ruleset-engine/reference/phases-list/
+* Pour connaître la liste des actions disponibles: https://developers.cloudflare.com/ruleset-engine/rules-language/actions/
+* Pour connaitre la liste des phases disponibles: https://developers.cloudflare.com/ruleset-engine/reference/phases-list/

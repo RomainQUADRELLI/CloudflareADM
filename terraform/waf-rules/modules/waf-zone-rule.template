@@ -12,14 +12,14 @@ resource "cloudflare_ruleset" "zone_level_custom_waf_ruleset" {
 
   rules = [{
     #### CHALLENGE JS RULE
-    description = "WAF RULE N°2"
+    description = "WAF RULE N°1"
     action      = "js_challenge"
     expression  = "( EXPRESSION DE LA REGLE )"
     enabled     = true
   },
   {
     #### MANAGED CHALLENGE RULE
-    description = "WAF RULE N°1"
+    description = "WAF RULE N°2"
     action      = "managed_challenge"
     expression  = "( EXPRESSION DE LA REGLE )"
     enabled     = true
@@ -28,6 +28,13 @@ resource "cloudflare_ruleset" "zone_level_custom_waf_ruleset" {
     #### INTERACTIVE CHALLENGE RULE
     description = "WAF RULE N°3"
     action      = "challenge"
+    expression  = "( EXPRESSION DE LA REGLE )"
+    enabled     = true
+  },
+  {
+    #### BLOCK CHALLENGE RULE
+    description = "WAF RULE N°4"
+    action      = "block"
     expression  = "( EXPRESSION DE LA REGLE )"
     enabled     = true
   }]

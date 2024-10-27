@@ -1,0 +1,13 @@
+resource "cloudflare_ruleset" "zone_level_custom_waf_managed_challenge" {
+  zone_id     = var.cloudflare_zone_id
+  name        = "WAF RULE NAME"
+  description = "WAF RULE DESCRIPTION"
+  kind        = "zone"
+  phase       = "http_request_firewall_custom"
+
+  rules = [{
+    action = "managed_challenge"
+    expression  = "( EXPRESSION DE LA REGLE )"
+    enabled     = true
+  }]
+}

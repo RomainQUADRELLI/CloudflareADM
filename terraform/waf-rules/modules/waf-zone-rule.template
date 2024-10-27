@@ -23,5 +23,12 @@ resource "cloudflare_ruleset" "zone_level_custom_waf_ruleset" {
     action      = "managed_challenge"
     expression  = "( EXPRESSION DE LA REGLE )"
     enabled     = true
+  },
+  {
+    #### INTERACTIVE CHALLENGE RULE
+    description = "WAF RULE N°3"
+    action      = "challenge"
+    expression  = "( EXPRESSION DE LA REGLE )"
+    enabled     = true
   }]
 }

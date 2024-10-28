@@ -5,6 +5,7 @@ Ce projet a pour but d'industrialiser le déploiement et l'administration d'un c
 # Versions
 
 * **Provider Cloudflare:** 5.0.0-alpha1
+* **TFEnv:** 1.9.8
 
 # API Token
 
@@ -14,7 +15,7 @@ Afin de pouvoir utiliser les différents modules, un ou plusieurs tokens doivent
 # Fonctionnement
 
 Chaque fonctionnalité Cloudflare est prise en charge dans un dossier dédié.\
-Chaque dossier de fonctionnalité possède l'arborescence suivante:\
+Chaque dossier de fonctionnalité possède l'arborescence suivante:
 * Un répertoire **modules** contenant le provider, les variables ainsi que les ressources inhérentes à la fonctionnalité Cloudflare concernée.
 * Un répertoire pour chaque zone à administrer, chacun contenant un fichier **main.tf** ainsi qu'un ou plusieurs fichiers d'exemple à adapter.
 

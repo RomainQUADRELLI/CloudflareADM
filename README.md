@@ -55,5 +55,5 @@ Ce module permet de créer une ruleset spécifique à une zone.\
 
 # Copyright
 
-Romain QUADRELLI
+Romain QUADRELLI - 2024
 

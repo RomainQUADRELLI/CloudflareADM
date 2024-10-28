@@ -23,17 +23,17 @@ Chaque dossier de fonctionnalité possède l'arborescence suivante:\
 Par défaut, ce projet stoque les fichiers state localement. A vous de prendre en charge la sécurité de ces derniers.\
 Cependant, il est possible (préférable) de stocker vos fichiers state dans un S3 sur un compte commun ou dédié à votre projet.\
 Bien que commenté par défaut, le bloc suivant dans le fichier **provider.tf** vous permet de paramétrer le stockage de vos fichiers state vers un S3:\
-``
-terraform {\
-  backend "s3" {\
-    bucket         = "bucket-name"\
-    region         = "region"\
-    dynamodb_table = "dynamodb-table-name"\
-    profile        = "AWS profile name"\
-    key            = "Name of the Terraform state file"\
-  }\
-}\
-``
+```
+terraform {
+  backend "s3" {
+    bucket         = "bucket-name"
+    region         = "region"
+    dynamodb_table = "dynamodb-table-name"
+    profile        = "AWS profile name"
+    key            = "Name of the Terraform state file"
+  }
+}
+```
 
 # WAF Zone Rules
 

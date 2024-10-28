@@ -9,9 +9,9 @@ Ce projet a pour but d'industrialiser le déploiement et l'administration d'un c
 # API Token
 
 Afin de pouvoir utiliser les différents modules, un ou plusieurs token doivent être crés depuis un compte disposant des droits d'administration sur la zone voulue.\
-**\/\!\\ Le token d'API ne s'affiche qu'une seule fois, conservez le précieusement. \/\!\\**
+**\/\!\\ Le token d'API ne s'affiche qu'une seule fois, conservez le précieusement. \/\!\\**.
 
-# Fonctionnement
+# Fonctionnement
 
 Chaque fonctionnalité Cloudflare est prise en charge dans un dossier dédié.\
 Chaque dossier de fonctionnalité possède l'arborescence suivante:\
